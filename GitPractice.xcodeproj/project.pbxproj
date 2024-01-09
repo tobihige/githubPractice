@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4506E28F2B4D416300C7557F /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4506E28E2B4D416300C7557F /* CustomCell.swift */; };
 		453618082B3AEEF100576A1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453618072B3AEEF100576A1D /* AppDelegate.swift */; };
 		4536180A2B3AEEF100576A1D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453618092B3AEEF100576A1D /* SceneDelegate.swift */; };
 		4536180C2B3AEEF100576A1D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4536180B2B3AEEF100576A1D /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		0D5D7186CCF6E3385019DD22 /* Pods-GitPractice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitPractice.debug.xcconfig"; path = "Target Support Files/Pods-GitPractice/Pods-GitPractice.debug.xcconfig"; sourceTree = "<group>"; };
 		2F1F0E3A80DA805C6681E9E5 /* Pods-GitPractice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitPractice.release.xcconfig"; path = "Target Support Files/Pods-GitPractice/Pods-GitPractice.release.xcconfig"; sourceTree = "<group>"; };
+		4506E28E2B4D416300C7557F /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		453618042B3AEEF100576A1D /* GitPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		453618072B3AEEF100576A1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		453618092B3AEEF100576A1D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				453618072B3AEEF100576A1D /* AppDelegate.swift */,
 				453618092B3AEEF100576A1D /* SceneDelegate.swift */,
 				4536180B2B3AEEF100576A1D /* ViewController.swift */,
+				4506E28E2B4D416300C7557F /* CustomCell.swift */,
 				453618102B3AEEF400576A1D /* Assets.xcassets */,
 				458E35AC2B4051A10042E2BB /* Controller */,
 				458E35AB2B40519B0042E2BB /* View */,
@@ -231,6 +234,7 @@
 			files = (
 				4536180C2B3AEEF100576A1D /* ViewController.swift in Sources */,
 				458E35AE2B4051C60042E2BB /* MemoModel.swift in Sources */,
+				4506E28F2B4D416300C7557F /* CustomCell.swift in Sources */,
 				453618082B3AEEF100576A1D /* AppDelegate.swift in Sources */,
 				4536180A2B3AEEF100576A1D /* SceneDelegate.swift in Sources */,
 			);
