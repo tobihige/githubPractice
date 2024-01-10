@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
+        configureNavigationController()
     }
     
     private func configureTableView() {
@@ -37,6 +38,18 @@ class ViewController: UIViewController {
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
+    
+    private func configureNavigationController() {
+        let rightButton = UIBarButtonItem(title: "Next", style: .plain, target: self, action: #selector(nextButtonTapped))
+        navigationItem.rightBarButtonItem = rightButton
+        navigationItem.title = "Title"
+    }
+    
+    @objc private func nextButtonTapped() {
+        print("tapped")
+    }
+    
+    
 }
 
 extension ViewController: UITableViewDataSource {
