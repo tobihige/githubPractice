@@ -18,10 +18,27 @@ class ViewController: UIViewController {
         return tableView
     }()
     
+    private var githubModels = [GithubModel]()
+    
+    private let githubAPI = GithubAPI.shared
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
         configureNavigationController()
+        githubAPI.get(searchWord: "sample"){
+            [weak self] result in
+            switch result {
+            case let .success(models):
+                DispatchQueue.main.async {
+                    self?.githubModels = models
+                    self?.tableView.reloadData()
+                }
+            case let .failure(error):
+                print(error)
+                break
+            }
+        }
     }
     
     private func configureTableView() {
@@ -54,7 +71,7 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return fruits.count
+        return githubModels.count
     }
 }
 
@@ -63,7 +80,7 @@ extension ViewController: UITableViewDelegate {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CustomCell.identifier, for: indexPath) as? CustomCell else { fatalError() }
         
-        cell.configure(titleLabelText: fruits[indexPath.row])
+        cell.configure(githubModel: githubModels[indexPath.row])
         return cell
         
     }

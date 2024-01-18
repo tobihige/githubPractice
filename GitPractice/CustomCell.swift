@@ -22,11 +22,10 @@ class CustomCell: UITableViewCell {
         contentView.addSubview(titleLabel)
     }
     
-    func configure(titleLabelText: String) {
-        self.titleLabel.text = titleLabelText
+    func configure(githubModel: GithubModel) {
+        self.titleLabel.text = githubModel.name
         
         NSLayoutConstraint.activate([
-
             titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
             titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 15),
         ])
